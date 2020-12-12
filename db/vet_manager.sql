@@ -1,9 +1,9 @@
-DROP TABLE IF EXISTS vets;
 DROP TABLE IF EXISTS pets;
+DROP TABLE IF EXISTS vets;
 
 CREATE TABLE vets (
     id SERIAL PRIMARY KEY,
-    vet_name VARCHAR(255),
+    vet_name VARCHAR(255)
     );
 
 CREATE TABLE pets (
