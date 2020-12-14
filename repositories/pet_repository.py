@@ -7,7 +7,7 @@ import repositories.vet_repository as vet_repository
 
 def save(pet):
     sql = "INSERT INTO pets (pet_name, date_of_birth, pet_type, owner_name, treatment_notes, vet_id) VALUES (%s, %s, %s, %s, %s, %s) RETURNING *"
-    values = [pet.pet_name, pet.date_of_birth, pet.type, pet.owner_name, pet.treatment_notes, pet.vet.id]
+    values = [pet.pet_name, pet.date_of_birth, pet.pet_type, pet.owner_name, pet.treatment_notes, pet.vet.id]
     results = run_sql(sql, values)
     id = results[0]['id']
     pet.id = id
