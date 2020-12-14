@@ -1,30 +1,25 @@
 
-{% extends 'base.html'%}
-
-{%block content %}
-<h1>Pet</h1>
-<div> class = "Our Pets">
-{% for pet in pets%}
-<div> class = "pet {{pet.pet_type}}">
-    <ul> id=pet_details
-        <li>Petname:<a href="/pet/{{pet.id}}/edit">{{pet.pet_name}}</a></li>
-        <li>Pet type<a href="/pet/{{pet.pet_type}}">{{pet.pet_type}}</a></li>
-        <li>Date of Birth<a href="/pet/{{pet.date_of_birth}}">{{pet.date_of_birth}}</a></li>
-        <li>Owner<a href="/owner/{{pet.owner_name}}">{{pet.owner_name}}</a></li>
-        <li>Treatment<a href="/pet/{{pet.treatment_notes}}">{{pet.treatment_notes}}</a></li>
-
-<form action = "/pet/{{pet.id}}/edit">
-    <button>Edit</button>
-</form>
-<form action ="/pet/{{pet.id}}/delete" method="POST">
-    </ul>
-
-</form>
-</div>
+{% extends "base.html" %}
+{% block content %}
 
 
-</div>
+{% for pet in all_pets %}
+  <div class="pet">
+    <div class="content">
+      <a href="/pet/{{pet.id}}">{{pet.pet_name}}</a>
+      <div class="pet name">
+        {{pet.date_of_birth}}
+        <span class="Pet type">{{pet.pet_type}}</span>
+        <p><i>{{pet.vet.name()}}</i></p>
+      </div>
+      <div class="buttons">
 
+        <form class="delete-form" action="/pet/{{pet.id}}/delete" method="POST">
+          <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
 {% endfor %}
 
 {% endblock %}
