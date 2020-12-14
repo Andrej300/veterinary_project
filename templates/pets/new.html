@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/pets" method="post">
+
+  <div>
+    <label for="Pet name">Pet name:</label>
+    <input type="text" id="Pet name" name="Pet name" placeholder="Pet name" required autofocus>
+  </div>
+
+  <div>
+    <label for="Date of Birth">Date of Birth:</label>
+    <input type="text" id="Date of Birth" name="Date of Birth" placeholder="Date of Birth" required autofocus>
+  </div>
+
