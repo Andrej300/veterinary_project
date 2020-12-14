@@ -10,13 +10,14 @@
 </head>
 <body>
   <header id="header">
-    <nav>
-      <ul class="menu">
-        <li><a href="{{ url_for('home') }}">Home</a></li>
-        <li><a href="{{ url_for('pets.pets') }}">Pets</a></li>
-        <li><a href="{{ url_for('pets.new_pet') }}">New Pet</a></li>
+    <h1>
+      Little Friends Vet Clinic
+    </h1>
+      <ul id="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/pet">Pet</a></li>
+        <li><a href="/pet/new">New Pet</a></li>
       </ul>
-    </nav>
   </header>
   <div class="container">
     {% block content %}
