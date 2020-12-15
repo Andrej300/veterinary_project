@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div>
+    <p>{{pet.pet_name}}</p>
+    <hr>
+    <p>{{pet.date_of_birt}}</p>
+    <p>{{pet.pet_type}}</p>
+    <p>{{pet.owner_name}}</p>
+    <p>{{pet.treatment_notes}}</p>
+    <p>{{pet.vet}}</p>
+
+    <p><a href="/pets/{{pet.id}}/edit">Edit</a></p>
+  </div>
+
+{% endblock %}

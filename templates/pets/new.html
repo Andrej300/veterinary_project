@@ -28,4 +28,17 @@
     <input type="text" id="Treatment" name="Treatment" placeholder="Treatment" required>
   </div>
   
-  
+  <div>
+    <label for="vet">Vet:</label>
+    <select id="vet" name="vet_id">
+      {% for vet in vets %}
+        <option value="{{ vet.id }}">{{ vet.name() }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <button type="submit">Add Pet</button>
+
+</form>
+
+{% endblock %}
