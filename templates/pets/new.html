@@ -31,8 +31,8 @@
   <div>
     <label for="vet">Vet:</label>
     <select id="vet" name="vet_id">
-      {% for vet in vets %}
-        <option value="{{ vet.id }}">{{ vet.name() }}</option>
+      {% for vet in all_vets %}
+        <option value="{{ vet.id }}">{{ vet.vet_name}}</option>
       {% endfor %}
     </select>
   </div>

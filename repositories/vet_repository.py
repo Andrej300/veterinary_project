@@ -22,7 +22,7 @@ def select_all():
     for row in results:
         vet = Vet(row['vet_name'], row['id'] )
         vets.append(vet)
-    return vet
+    return vets
 
 
 def select(id):

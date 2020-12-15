@@ -22,7 +22,14 @@ def select_all():
 
     for row in results:
         vet = vet_repository.select(row['vet_id'])
-        pet = Pet(row['pet_name'], row['date_of_birth'], row['pet_type'], row['owner_name'], row['treatment_notes'], row['id'] )
+        pet = Pet(
+            row['pet_name'], 
+            row['date_of_birth'], 
+            row['pet_type'], 
+            row['owner_name'], 
+            row['treatment_notes'], 
+            vet,
+            row['id'] )
         pets.append(pet)
     return pets
 
@@ -36,7 +43,12 @@ def select(id):
 
     if result is not None:
         vet = vet_repository.select(result['vet_id'])
-        pet = Pet(result['pet_name'], result['date_of_birth'], result['pet_type'], result['owner_name'], result['treatment_notes'], result['id'] )
+        pet = Pet(result['pet_name'], result['date_of_birth'],
+        result['pet_type'], result['owner_name'],
+        result['treatment_notes'],
+        vet,
+        result['id']
+         )
     return pet
 
 

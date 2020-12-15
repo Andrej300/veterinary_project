@@ -9,7 +9,7 @@
 
   <div>
     <label for="Date of birth">Date of birth:</label>
-    <input type="text" id="Date of birth" name="Date of birth" value="{{pet.date_of_birth}" required autofocus>
+    <input type="text" id="Date of birth" name="Date of birth" value="{{pet.date_of_birth}}" required autofocus>
   </div>
 
   <div>
@@ -31,10 +31,10 @@
   <div>
     <label for="vet">Vet:</label>
     <select id="vet" name="vet_id">
-      {% for author in all_authors %}
+      {% for vet in all_vets %}
         <option value="{{ vet.id }}"
           {% if pet.vet.id == vet.id %} selected="selected"{% endif %}>
-          {{ vet.name() }}
+          {{ vet.vet_name}}
         </option>
       {% endfor %}
     </select>

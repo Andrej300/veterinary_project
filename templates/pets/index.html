@@ -6,15 +6,15 @@
 {% for pet in all_pets %}
   <div class="pet">
     <div class="content">
-      <a href="/pet/{{pet.id}}">{{pet.pet_name}}</a>
+      <a href="/pets/{{pet.id}}">{{pet.pet_name}}</a>
       <div class="pet name">
         {{pet.date_of_birth}}
         <span class="Pet type">{{pet.pet_type}}</span>
-        <p><i>{{pet.vet.name}}</i></p>
+        <p><i>{{pet.vet.vet_name}}</i></p>
       </div>
       <div class="buttons">
 
-        <form class="delete-form" action="/pet/{{pet.id}}/delete" method="POST">
+        <form class="delete-form" action="/pets/{{pet.id}}/delete" method="POST">
           <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
         </form>
       </div>

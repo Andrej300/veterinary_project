@@ -3,12 +3,13 @@ from flask import Blueprint
 from models.pet import Pet
 import repositories.pet_repository as pet_repository
 import repositories.vet_repository as vet_repository
+import pdb
 
 pets_blueprint = Blueprint("pets", __name__)
 
 @pets_blueprint.route("/pets")
 def pets():
-    pets = pet_repository.select_all() 
+    pets = pet_repository.select_all()
     return render_template("pets/index.html", all_pets = pets)
 
 # NEW
@@ -22,11 +23,11 @@ def new_pet():
 
 @pets_blueprint.route("/pets", methods=['POST'])
 def create_pet():
-    pet_name    = request.form['pet_name']
-    date_of_birth = request.form['date_of_birth']
-    pet_type   = request.form['pet_type']
-    owner_name = request.form['owner_name']
-    treatment_notes = request.form['treatment_notes']
+    pet_name    = request.form['Pet name']
+    date_of_birth = request.form['Date of Birth']
+    pet_type   = request.form['Pet type']
+    owner_name = request.form['Owner name']
+    treatment_notes = request.form['Treatment']
     vet  = vet_repository.select(request.form['vet_id'])
 
     pet = Pet(pet_name, date_of_birth, pet_type, owner_name, treatment_notes, vet)
@@ -47,20 +48,20 @@ def show_pet(id):
 def edit_pet(id):
     pet = pet_repository.select(id)
     vets = vet_repository.select_all()
-    return render_template('pet/edit.html', pet = pet, all_vets = vets)
+    return render_template('pets/edit.html', pet = pet, all_vets = vets)
 
 # UPDATE
 
 @pets_blueprint.route("/pets/<id>", methods=['POST'])
 def update_pet(id):
-    pet_name    = request.form['pet_name']
-    date_of_birth = request.form['date_of_birth']
-    pet_type   = request.form['pet_type']
-    owner_name = request.form['owner_name']
-    treatment_notes = request.form['treatment_notes']
+    pet_name    = request.form['Pet name']
+    date_of_birth = request.form['Date of birth']
+    pet_type   = request.form['Pet type']
+    owner_name = request.form['Owner name']
+    treatment_notes = request.form['Treatment']
     vet  = vet_repository.select(request.form['vet_id'])
     pet = Pet(pet_name, date_of_birth, pet_type, owner_name, treatment_notes, vet, id)
-    print(pet.vet.full_name())
+    print(pet.vet.vet_name)
     pet_repository.update(pet)
     return redirect('/pets')
 
