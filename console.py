@@ -5,8 +5,8 @@ from models.vet import Vet
 import repositories.pet_repository as pet_repository
 import repositories.vet_repository as vet_repository
 
-# pet_repository.delete_all()
-# vet_repository.delete_all()
+pet_repository.delete_all()
+vet_repository.delete_all()
 
 
 vet_1 = Vet("Little Friends Vet Clinic 1")
