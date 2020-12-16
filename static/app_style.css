@@ -1,7 +1,11 @@
 body{
     font-family: "Helvetica", arial, sans-serif; font-size: 16px;
     background-color:rgb(197, 221, 211)}
-
+    background-image: url('https://www.keysvillemobilevet.com/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+                
 
 .pet {
     border: 1px solid #8fdcc7;
@@ -23,15 +27,26 @@ body{
     
 .menu{
     display: flex;
-    padding: 10px;
+    justify-content: start;
+    padding: 23px;
     background-color: rgb(47, 93, 80);
-    color: white;}
+    color: white;
+    
+}
     
 .menu li a{
+    background-color: white;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 17px;
+    color: rgb(47, 93, 80);;
     text-decoration: none;}
     
 .menu li a:visited{
-    color: white;}
+    background-color: rgb(197, 221, 211);
+    color: rgb(47, 93, 80);;}
     
 .menu li{
     padding-right: 10px;
@@ -53,35 +68,3 @@ body{
     background-size: cover;}
                 
 
-
-
-/* .Pet name {
-    font-weight: bold;
-    margin-bottom: 0.5em;
-    margin-right: 0.3em;
-}
-    
-.date_of_birth{
-    color: #2c3e5a;
-    font-size: 13px;
-    margin-left: 20px;
-}
-    
-.Pet type {
-    margin-top: 10px;
-    margin-left: 2px;
-    font-size: 1.4em;
-    color: #aab8c2;
-}
-    
-.owner_name i {
-    width: 80px;
-}
-    
-.treatment_notes {
-    font-size: 100%;
-    width : 100%;
-    padding: 10px;
-    margin: 10px;
-    box-sizing: border-box;
-} */
