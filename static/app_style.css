@@ -1,10 +1,7 @@
 body{
     font-family: "Helvetica", arial, sans-serif; font-size: 16px;
-    background-color:rgb(197, 221, 211)
-    background-image: url('https://www.keysvillemobilevet.com/images/background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    background-color:rgb(197, 221, 211)}
+
 
 .pet {
     border: 1px solid #8fdcc7;
@@ -26,26 +23,15 @@ body{
     
 .menu{
     display: flex;
-    justify-content: start;
-    padding: 23px;
+    padding: 10px;
     background-color: rgb(47, 93, 80);
-    color: white;
-    
-}
+    color: white;}
     
 .menu li a{
-    background-color: white;
-    padding: 10px;
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    font-size: 17px;
-    color: rgb(47, 93, 80);;
     text-decoration: none;}
     
 .menu li a:visited{
-    background-color: rgb(197, 221, 211);
-    color: rgb(47, 93, 80);;}
+    color: white;}
     
 .menu li{
     padding-right: 10px;
