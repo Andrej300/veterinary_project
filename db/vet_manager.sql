@@ -13,7 +13,7 @@ CREATE TABLE pets (
     pet_type VARCHAR(255),
     owner_name VARCHAR(255),
     treatment_notes VARCHAR(255),
-    vet_id INT REFERENCES vets(id) 
+    vet_id INT REFERENCES vets(id) ON DELETE CASCADE
 );
 
 
