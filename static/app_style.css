@@ -6,17 +6,17 @@ body{
     background-image: url("/static/image/Web_Photo_Editor.jpg");
     background-repeat: roundrepeat;
     background-size: cover;
-    background-position-y: center;
+
 }
 
 .pet {
-    border: 1px solid #8fdcc7;
+    border: none;
     width: 300px;
-    min-height: 68px;
-    padding: 10px;
-    display: flex;
-    line-height: 18px;
-    margin-bottom: 10px;}
+    min-height: 20px;
+    line-height: 20px;
+    margin-bottom: 40px;
+        
+}
 
 
 .trash-button{
@@ -60,13 +60,36 @@ body{
     display: flex;
     flex-wrap: wrap;
     width: 300px;
-    margin: 0 auto;}
+    margin: 0 auto;
+    border: none;
+}
+
+
+.content{
+    background-color: rgb(47, 93, 80);
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    color: white;
+    
+}
+
+.edit{
+    background-color: rgb(47, 93, 80);
+    border: none;
+    border-radius: 5px;
+    padding: 30px;
+    color: white;
+}
+
 
 .new_pet_form{
     border: none;
     border-radius: 20px;
     background-color: rgb(47, 93, 80);
     color: rgb(197, 221, 211);
+
+    
 
 }
     
@@ -93,6 +116,13 @@ body{
     padding-inline: 1px;
 }
 
+.edit{
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(47, 93, 80);
+    color: rgb(197, 221, 211);
+}
+
 #vet {
     background-color: rgb(132, 169, 165);
     border: none;
@@ -109,4 +139,15 @@ body{
     padding-right: 120px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.pet_birth{
+    padding-top: 20px;
+}
+
+
+#pet_name_index_html{
+    color: white;
+    font-size: 20px
+
 }

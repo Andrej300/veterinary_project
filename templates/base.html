@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href= "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
   <link rel="stylesheet"href="{{ url_for('static', filename='app_style.css') }}">
-  <title>Pet list</title>
+  <title>Little Friends Vet Clinic</title>
 </head>
 <body>
   <header>
@@ -15,6 +15,7 @@
         <li><a href="{{url_for ('home') }}">Home</a></li>
         <li><a href="{{ url_for('pets.pets') }}">Pets</a></li>
         <li><a href="{{ url_for('pets.new_pet') }}">New Pet</a></li>
+        <h2 style="margin-top: 0px;margin-bottom: 0px;">Little Friends Vet Clinic</h2>
       </ul>
     </nav>
   </header>

@@ -6,10 +6,10 @@
 {% for pet in all_pets %}
   <div class="pet">
     <div class="content">
-      <a href="/pets/{{pet.id}}">{{pet.pet_name}}</a>
-      <div class="pet name">
+      <a id="pet_name_index_html" href="/pets/{{pet.id}}">{{pet.pet_name}}</a>
+      <div class="pet_birth">
         {{pet.date_of_birth}}
-        <span class="Pet type">{{pet.pet_type}}</span>
+        <span class="pet_type">{{pet.pet_type}}</span>
         <p><i>{{pet.vet.vet_name}}</i></p>
       </div>
       <div class="buttons">
