@@ -3,6 +3,10 @@ body{
     font-family: "Helvetica", arial, sans-serif; font-size: 16px;
     background-color:rgb(197, 221, 211);
     background-image: #8fdcc7;
+    background-image: url("/static/image/Web_Photo_Editor.jpg");
+    background-repeat: roundrepeat;
+    background-size: cover;
+    background-position-y: center;
 }
 
 .pet {
@@ -74,12 +78,12 @@ body{
 
 }
 
-#home-image {
-    width:100vw;
+/* #home-image {
+    width:95vw;
     height:100vh;
     background-image: url('https://www.keysvillemobilevet.com/images/background.jpg');
     background-repeat: no-repeat;
-    background-size: cover;}
+    background-size: cover;} */
                 
 
 .input{
