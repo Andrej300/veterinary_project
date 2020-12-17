@@ -1,47 +1,49 @@
 {% extends "base.html" %}
 {% block content %}
-
-<form action="/pets/{{pet.id}}" method="post">
-  <div>
-    <label for="pet name">Pet name:</label>
-    <input type="text" id="Pet_name" name="Pet name" value="{{pet.pet_name}}" required>
-  </div>
-
-  <div>
-    <label for="Date of birth">Date of birth:</label>
-    <input type="text" id="Date of birth" name="Date of birth" value="{{pet.date_of_birth}}" required autofocus>
-  </div>
-
-  <div>
-    <label for="Pet type">Pet type:</label>
-    <input type="text" id="Pet type" name="Pet type" value="{{pet.pet_type}}" required autofocus>
-  </div>
-
-  <div>
-    <label for="Owner name">Owner name:</label>
-    <input type="text" id="Owner name" name="Owner name" value="{{pet.owner_name}}" required autofocus>
-  </div>
-  
-  <div>
-    <label for="Treatment">Treatment:</label>
-    <input type="text" id="Treatment" name="Treatment" value="{{pet.treatment_notes}}" required autofocus>
-  </div>
+<form class="container" action="/pets/{{pet.id}}" method="post">
+  <div class="new_pet_form">
+    <div class="new_pet_menu">
+      <label for="pet name">Pet name:</label>
+      <input class="input" type="text" id="Pet_name" name="Pet name" value="{{pet.pet_name}}" required>
+    </div>
     
-
-  <div>
-    <label for="vet">Vet:</label>
-    <select id="vet" name="vet_id">
-      {% for vet in all_vets %}
+    <div class="new_pet_menu">
+      <label for="Date of birth">Date of birth:</label>
+      <input class="input" type="text" id="Date of birth" name="Date of birth" value="{{pet.date_of_birth}}" required autofocus>
+    </div>
+    
+    <div class="new_pet_menu">
+      <label for="Pet type">Pet type:</label>
+      <input class="input" type="text" id="Pet type" name="Pet type" value="{{pet.pet_type}}" required autofocus>
+    </div>
+    
+    <div class="new_pet_menu">
+      <label for="Owner name">Owner name:</label>
+      <input class="input" type="text" id="Owner name" name="Owner name" value="{{pet.owner_name}}" required autofocus>
+    </div>
+    
+    <div class="new_pet_menu">
+      <label for="Treatment">Treatment:</label>
+      <input class="input" type="text" id="Treatment" name="Treatment" value="{{pet.treatment_notes}}" required autofocus>
+    </div>
+    
+    
+    <div class="new_pet_menu">
+      <label for="vet">Vet:</label>
+      <select id="vet" name="vet_id">
+        {% for vet in all_vets %}
         <option value="{{ vet.id }}"
-          {% if pet.vet.id == vet.id %} selected="selected"{% endif %}>
-          {{ vet.vet_name}}
-        </option>
+        {% if pet.vet.id == vet.id %} selected="selected"{% endif %}>
+        {{ vet.vet_name}}
+      </option>
       {% endfor %}
     </select>
   </div>
 
-  <button type="submit">Update Pet</button>
+  <button id="add_pet_button" type="submit">Update</button>
 
-</form>
+  </form>
+</section>
+
 
 {% endblock %}
