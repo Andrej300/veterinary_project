@@ -1,34 +1,34 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form action="/pets" method="post">
+<form action="/pets" method="post" class="new_pet_form">
 
-  <div>
+  <div class="new_pet_menu">
     <label for="Pet name">Pet name:</label>
-    <input type="text" id="Pet name" name="Pet name" placeholder="Pet name" required autofocus>
+    <input class="input" type="text" id="Pet name" name="Pet name" placeholder="Pet name" required autofocus>
   </div>
 
-  <div>
+  <div class="new_pet_menu">
     <label for="Date of Birth">Date of Birth:</label>
-    <input type="text" id="Date of Birth" name="Date of Birth" placeholder="Date of Birth" required autofocus>
+    <input class="input" type="text" id="Date of Birth" name="Date of Birth" placeholder="Date of Birth" required autofocus>
   </div>
 
-  <div>
+  <div class="new_pet_menu">
     <label for="Pet type">Pet type:</label>
-    <input type="text" id="Pet type" name="Pet type" placeholder="Pet type" required>
+    <input class="input" type="text" id="Pet type" name="Pet type" placeholder="Pet type" required>
   </div>
 
-  <div>
+  <div class="new_pet_menu">
     <label for="Owner name">Owner name:</label>
-    <input type="text" id="Owner name" name="Owner name" placeholder="Owner name" required>
+    <input class="input" type="text" id="Owner name" name="Owner name" placeholder="Owner name" required>
   </div>
 
-  <div>
+  <div class="new_pet_menu">
     <label for="Treatment">Treatment:</label>
-    <input type="text" id="Treatment" name="Treatment" placeholder="Treatment" required>
+    <input class="input" type="text" id="Treatment" name="Treatment" placeholder="Treatment" required>
   </div>
   
-  <div>
+  <div class="new_pet_menu">
     <label for="vet">Vet:</label>
     <select id="vet" name="vet_id">
       {% for vet in all_vets %}
@@ -37,7 +37,7 @@
     </select>
   </div>
 
-  <button type="submit">Add Pet</button>
+  <button id="add_pet_button" type="submit">Add Pet</button>
 
 </form>
 
